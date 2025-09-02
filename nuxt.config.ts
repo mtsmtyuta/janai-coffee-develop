@@ -83,10 +83,6 @@ export default defineNuxtConfig({
   },
 
   nitro: {
-    preset: "firebase",
-    firebase: {
-      gen: 2,
-      nodeVersion: '18'
-    },
+    preset: "vercel",
   },
 })
