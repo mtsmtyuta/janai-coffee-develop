@@ -1,0 +1,89 @@
+{
+  "functions": [
+    {
+      "source": ".output/server",
+      "codebase": "serverstg"
+    },
+    {
+      "source": "functions",
+      "codebase": "original",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log"
+      ],
+      "predeploy": [
+        "npm --prefix \"$RESOURCE_DIR\" run build"
+      ]
+    }
+  ],
+  "hosting": [
+    {
+      "target": "production",
+      "cleanUrls": true,
+      "public": ".output/public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "function": "server"
+        }
+      ],
+      "headers": [
+        {
+          "source": "/images/**",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=2592000, public"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target": "staging",
+      "cleanUrls": true,
+      "public": ".output/public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "function": "serverstg"
+        }
+      ],
+      "headers": [
+        {
+          "source": "/images/**",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=2592000, public"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "emulators": {
+    "functions": {
+      "port": 5001
+    },
+    "hosting": {
+      "port": 5000
+    },
+    "ui": {
+      "enabled": true
+    },
+    "singleProjectMode": true
+  }
+}
