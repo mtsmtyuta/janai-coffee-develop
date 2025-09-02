@@ -1,0 +1,40 @@
+$inner-width: 1120px;
+$sp-width: 740px;
+$pc-width: 741px;
+$sp-small-width: 340px;
+
+// Page
+$page-padding-start: 180px;
+$page-heading-padding-start: 140px;
+$page-padding-start-sp: 90px;
+$page-heading-padding-start-sp: 90px;
+
+$app-colors: (
+  // text: #111111,
+  text: #00254c,
+  dark: #333333,
+  light: #808080,
+  bg: #f1f1f1,
+  border: #e5e5e5,
+  bg_gray: #f2f2f2,
+  shadow: #ebebeb,
+  logo: #001525,
+
+  primary: #a6b6d3,
+
+  g: #45b035,
+  g_dark: #339b24,
+  b: #00a0e9,
+  b_dark: #0e8deb,
+  p: #e62e8b,
+  y: #ffb000,
+  y_text: #fa9000,
+  beige_text: #a9896b,
+);
+
+$gradient-b: linear-gradient(to right, #29bcff 0%, #00a0e9 50%, #008fe9 100%);
+$gradient-g: linear-gradient(to right, #55c644 0%, #45b035 50%, #3da32e 100%);
+
+@function colors($key) {
+  @return map-get($app-colors, $key);
+}

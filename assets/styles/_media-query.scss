@@ -1,0 +1,70 @@
+@mixin font-roboto-condensed() {
+  font-family: 'Roboto Condensed', sans-serif;
+  letter-spacing: 0.05em;
+}
+
+@mixin drop-shadow() {
+  box-shadow: 0 3px 6px rgba(black, 0.16);
+}
+
+@mixin md() {
+  @media only screen and (max-width: $inner-width) {
+    @content;
+  }
+}
+
+@mixin sp() {
+  @media only screen and (max-width: $sp-width) {
+    @content;
+  }
+}
+
+@mixin sp-small() {
+  @media only screen and (max-width: $sp-small-width) {
+    @content;
+  }
+}
+
+@mixin pc() {
+  @media only screen and (min-width: $pc-width) {
+    @content;
+  }
+}
+
+@mixin inner($max-width: $inner-width) {
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
+  max-width: $max-width;
+  @include sp() {
+    margin: 0;
+    padding-right: 3%;
+    padding-left: 3%;
+    width: auto;
+  }
+}
+
+@mixin small-inner() {
+  margin: 0 auto;
+  width: $sp-width;
+  @include sp() {
+    margin: 0 16px;
+    width: auto;
+  }
+}
+
+@mixin hover() {
+  @include pc() {
+    cursor: pointer;
+    transition: opacity 0.2s ease-out;
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+}
+
+@mixin center-letter-spacing($size: 0.05em) {
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-indent: 0.05em;
+}

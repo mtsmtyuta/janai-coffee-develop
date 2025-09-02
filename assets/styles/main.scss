@@ -1,0 +1,82 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Noto Sans JP Light';
+  font-style: normal;
+  src:
+    url('/assets/fonts/NotoSansJP-Light_subset.woff2') format('woff2'),
+    url('/assets/fonts/NotoSansJP-Light_subset.ttf') format('truetype');
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 50px;
+  font-size: 10px;
+  width: 100%;
+  min-width: 320px;
+  overflow-x: hidden;
+  @include sp() {
+    font-size: 8.2px;
+  }
+  @include sp-small() {
+    font-size: 8px;
+  }
+}
+
+body {
+  color: colors('text');
+  font-size: 1.6rem;
+  font-family: 'Noto Sans JP Light', sans-serif;
+  font-weight: 100;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  text-rendering: auto;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  word-wrap: break-word;
+  min-width: 320px;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+a {
+  color: colors(text);
+  text-decoration: none;
+}
+
+input {
+  &:focus {
+    outline: none;
+  }
+}
+
+svg {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+
+.page-heading {
+  margin-bottom: 64px;
+  text-align: center;
+  .main {
+    font-size: 2.4rem;
+    font-weight: bold;
+  }
+  .sub {
+    font-size: 1.6rem;
+    margin-top: 16px;
+  }
+}
+
+.page-content:not(.non-padding) {
+  @include inner();
+}
+
+.page-content-main {
+  // max-width: 1120px;
+  padding-bottom: 80px;
+  width: 100%;
+}
+

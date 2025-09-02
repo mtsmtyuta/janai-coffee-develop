@@ -1,0 +1,18 @@
+{
+  "projects": {
+    "default": "1334648084"
+  },
+  "targets": {
+    "1334648084": {
+      "hosting": {
+        "production": [
+          "janai-coffee"
+        ],
+        "staging": [
+          "janaicoffee-stg"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

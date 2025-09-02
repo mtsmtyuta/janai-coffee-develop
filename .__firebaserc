@@ -1,0 +1,18 @@
+{
+  "projects": {
+    "default": "janai-coffee",
+    "staging": "janai-coffee"
+  },
+  "targets": {
+    "janai-coffee": {
+      "hosting": {
+        "production": [
+          "janai-coffee"
+        ],
+        "staging": [
+          "janaicoffee-stg"
+        ]
+      }
+    }
+  }
+}
