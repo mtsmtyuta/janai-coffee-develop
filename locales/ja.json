@@ -28,7 +28,7 @@
     "access_hours": "OPEN 18:00 / CLOSE 24:00",
     "access_address": "〒150-0022",
     "access_location": "東京都渋谷区恵比寿南2-3-13山燃ビルB1",
-    "access_email": "MAIL：info@janaicoffee.tokyo",
+    "access_email": "info{'@'}janaicoffee.tokyo",
     "access_reservation_note": "予約はWEBフォームより承っております。",
     "access_form_label": "フォーム:"
   },

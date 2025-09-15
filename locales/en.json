@@ -28,7 +28,7 @@
     "access_hours": "OPEN 18:00 / CLOSE 24:00",
     "access_address": "〒150-0022",
     "access_location": "2-3-13 Ebisu Minami, Shibuya-ku, Tokyo, Yamanen Building B1",
-    "access_email": "MAIL: info@janaicoffee.tokyo",
+    "access_email": "info{'@'}janaicoffee.tokyo",
     "access_reservation_note": "Reservations are accepted via web form.",
     "access_form_label": "Form:"
   },
