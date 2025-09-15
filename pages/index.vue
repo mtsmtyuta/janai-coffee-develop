@@ -14,7 +14,7 @@
       .sidetext-right janaicoffee.tokyo
     .eyecatch-news(v-if='NewsNum')
       .news-short
-        .news-info NEWS
+        .news-info {{ $t('content.news') }}
         .news-short-content#news-short-content
           .news-date {{ format(news[NewsDisplayNum].createdAt) }}
           .news-title(@click='openNewsBody') {{ news[NewsDisplayNum].title }}
@@ -26,8 +26,8 @@
             span.news-num {{NewsNum}}
           .news-arrow-right.news-arrow(@click='plusNewsDisplayNum') &gt;
     .eyecatch-reservation(v-if='isPageBar')
-      .reservation-button-wrapper: a.reservation-button(href='https://yoyaku.toreta.in/janaicoffee/#/' target="_blank") 予約する
-      .reservation-caption 混雑を避けるため事前予約をお願いしております。
+      .reservation-button-wrapper: a.reservation-button(href='https://yoyaku.toreta.in/janaicoffee/#/' target="_blank") {{ $t('content.reservation_button') }}
+      .reservation-caption {{ $t('content.reservation_caption') }}
   .news-body-wrapper
     transition(name="fade")
       news-body(v-if='isNewsBodyDisplay' :news='news[NewsDisplayNum]' @cancelNewsBody="closeNewsBody" @onClickNewsLeftArrow='minusNewsDisplayNum' @onClickNewsRightArrow='plusNewsDisplayNum')
@@ -44,48 +44,16 @@
             .section-item-content(:class='{"is-fullwidth": isPageBar}')
               transition(name="fade")
                 h2.subtitle(v-if='!isPageBar')
-                  | 私たちが提供したいのは
+                  | {{ $t('content.concept_coffee_title') }}
                   br
-                  | コーヒーだけではありません。
+                  | {{ $t('content.concept_coffee_subtitle') }}
                 h2.subtitle(v-else)
-                  | コーヒー屋の
+                  | {{ $t('content.concept_bar_title') }}
                   br
-                  | フリをしたバー
+                  | {{ $t('content.concept_bar_subtitle') }}
               transition(name="fade")
-                .discription(v-if='!isPageBar')
-                  | 時を忘れる。
-                  br
-                  | 計ることをやめる。
-                  br
-                  | 周りと比べない。
-                  br
-                  | リラックスして
-                  br
-                  | 日常を忘れる時間を。
-                  br
-                  | 何一つ考えず、コーヒーと非日常を
-                  br
-                  | 存分にお楽しみいただけ
-                  br
-                  | る場所。それが『JANAI COFFEE』です。
-                .discription(v-else)
-                  | 禁酒法が施行されていた1920年代のアメリカ。
-                  br
-                  | その時代、美容室や法律事務所などを装って
-                  br
-                  | 裏でお酒を密売する文化「スピークイージー」
-                  br
-                  | が生まれ人気を博しました。
-                  br
-                  | JANAI COFFEE は
-                  br
-                  | 「コンセプトを面白いと思ってくれた
-                  br
-                  | 人たちだけが集まる場」を作るために
-                  br
-                  | このスピークイージーの仕組みを取り入れました。
-                  br
-                  | (もちろん合法なのでご安心くださいませ。)
+                .discription(v-if='!isPageBar' v-html="$t('content.concept_coffee_description').replace(/\n/g, '<br>')")
+                .discription(v-else v-html="$t('content.concept_bar_description').replace(/\n/g, '<br>')")
       section.section.section-concept#drink(v-scroll-motion="handleScrollMotion")
         .section-body
           .section-item(:class='{"reverse": !isPageBar}')
@@ -101,22 +69,11 @@
                         img.title-image(:src="top.src" :srcset="top.srcset")
             .section-item-content
               transition(name="fade")
-                h2.subtitle(v-if='!isPageBar')
-                  | 季節に合わせたブレンドを。
-                h2.subtitle(v-else)
-                  | バーへの入り方
+                h2.subtitle(v-if='!isPageBar') {{ $t('content.drink_coffee_title') }}
+                h2.subtitle(v-else) {{ $t('content.drink_bar_title') }}
               transition(name="fade")
-                .discription(v-if='!isPageBar')
-                  | 当店のバリスタが
-                  br
-                  | プロデュースするJANAIブレンド。
-                  br
-                  | 季節に合わせて豆の選び直しをしております。
-                .discription(v-else)
-                  | 見た目は普通のコーヒースタンド。
-                  br
-                  | その裏側には、この隠しページに
-                  br
+                .discription(v-if='!isPageBar' v-html="$t('content.drink_coffee_description').replace(/\n/g, '<br>')")
+                .discription(v-else v-html="$t('content.drink_bar_description').replace(/\n/g, '<br>')")
                   | 辿り着いた方だけが入れるバーがあります。
                   br
                   | スタッフにこちらの
@@ -133,16 +90,8 @@
           .section-body
             .section-item
               .section-item-content.is-center
-                h2.subtitle
-                  | テイクアウトして、
-                  br.disable-pc
-                  |すばらしい一日を
-                .discription
-                  | お持ち帰りのお客様用に、
-                  br
-                  | 専用のカップホルダーもご用意がございます。
-                  br
-                  | お気軽にお申し付けくださいませ。
+                h2.subtitle(v-html="$t('content.takeout_title').replace(/\n/g, '<br class=\"disable-pc\">')")
+                .discription(v-html="$t('content.takeout_description').replace(/\n/g, '<br>')")
       transition(name="fade")
         section.section.section-concept#menu(v-if='isPageBar' v-scroll-motion="handleScrollMotion")
           .section-body
@@ -152,34 +101,8 @@
                   .title-image-inner
                     img.title-image.title-image-portrait(src='/assets/menu-bar1.jpg' srcset='/assets/menu-bar1.jpg 1x, /assets/menu-bar1@2x.jpg 2x')
               .section-item-content
-                h2.subtitle
-                    | FUN & SERENDIPITY
-                .discription
-                  | バーってお酒に詳しくないと
-                  br
-                  | 遊びにいけないイメージ。
-                  br
-                  | そのイメージを無くしたい。
-                  br
-                  | 実はこのお店のスタッフも
-                  br
-                  | 全員がお酒に凄く詳しい
-                  br
-                  | という訳ではありません。
-                  br
-                  | ですが、
-                  br
-                  | このお店にはスタッフみんなで試飲して
-                  br
-                  | たのしく選んだお酒がたくさん揃っています。
-                  br
-                  | 詳しくなくても、味が難しくても
-                  br
-                  | ラベルがかわいい、名前がおもしろい、
-                  br
-                  | そんな「なんとなく」な理由で
-                  br
-                  | JANAI COFFEEをお楽しみください。
+                h2.subtitle {{ $t('content.menu_bar_title') }}
+                .discription(v-html="$t('content.menu_bar_description').replace(/\n/g, '<br>')")
                   br
                   | ちなみにバー側のページは
                   br
@@ -195,13 +118,13 @@
             .section-item-title.section-item-title-access
               .access-list
                 ul
-                  li: | JANAI COFFEE
-                  li: | OPEN 18:00 / CLOSE 24:00
-                  li: | 〒150-0022
-                  li: | 東京都渋谷区恵比寿南2-3-13山燃ビルB1
-                  li: a(href="mailto:info@janaicoffee.tokyo") MAIL：info@janaicoffee.tokyo
-                  li(v-if='isPageBar') 予約はWEBフォームより承っております。
-                  li(v-if='isPageBar'): | フォーム:
+                  li {{ $t('content.access_name') }}
+                  li {{ $t('content.access_hours') }}
+                  li {{ $t('content.access_address') }}
+                  li {{ $t('content.access_location') }}
+                  li: a(href="mailto:info@janaicoffee.tokyo") {{ $t('content.access_email') }}
+                  li(v-if='isPageBar') {{ $t('content.access_reservation_note') }}
+                  li(v-if='isPageBar') {{ $t('content.access_form_label') }}
                     a.access-form-link(href='https://yoyaku.toreta.in/janaicoffee/#/' target="_blank") https://yoyaku.toreta.in/janaicoffee/#/
             .section-item-content.access-map-wrapper
               .access-map

@@ -7,24 +7,26 @@ header.header(:class='{ "fixed": isRoot && !isScroll, "is-page-bar": isPageBar }
       h1.header-logo: nuxt-link.header-logo(to='/' v-if='isPageBar')
         icon-logo-yoko-bar
     nav.menu
-      nuxt-link.menu-item(to="/#concept") CONCEPT
-      nuxt-link.menu-item(to="/#drink" v-if='!isPageBar') COFFEE
-      nuxt-link.menu-item(to="/#drink" v-if='isPageBar') BAR
-      nuxt-link.menu-item(to="/#menu" v-if='isPageBar') MENU
+      nuxt-link.menu-item(to="/#concept") {{ $t('navigation.concept') }}
+      nuxt-link.menu-item(to="/#drink" v-if='!isPageBar') {{ $t('navigation.coffee') }}
+      nuxt-link.menu-item(to="/#drink" v-if='isPageBar') {{ $t('navigation.bar') }}
+      nuxt-link.menu-item(to="/#menu" v-if='isPageBar') {{ $t('navigation.menu') }}
       //- nuxt-link.menu-item(to="/#product" v-if='!isPageBar') PRODUCT
-      nuxt-link.menu-item(to="/#access") ACCESS
+      nuxt-link.menu-item(to="/#access") {{ $t('navigation.access') }}
+      LanguageSwitcher
     .sp-header-menu(:class='{ "open": isMenuDisplayed }', @click='toggleMenu')
       .bar.bar-1
       .bar.bar-2
       .bar.bar-3
   nav.sp-menu(:class='{ "open": isMenuDisplayed }', @click='closeMenu')
     .sp-menu-inner
-      nuxt-link.sp-menu-item(to="/#concept") CONCEPT
-      nuxt-link.sp-menu-item(to="/#drink" v-if='!isPageBar') COFFEE
-      nuxt-link.sp-menu-item(to="/#drink" v-if='isPageBar') BAR
-      nuxt-link.sp-menu-item(to="/#menu" v-if='isPageBar') MENU
+      nuxt-link.sp-menu-item(to="/#concept") {{ $t('navigation.concept') }}
+      nuxt-link.sp-menu-item(to="/#drink" v-if='!isPageBar') {{ $t('navigation.coffee') }}
+      nuxt-link.sp-menu-item(to="/#drink" v-if='isPageBar') {{ $t('navigation.bar') }}
+      nuxt-link.sp-menu-item(to="/#menu" v-if='isPageBar') {{ $t('navigation.menu') }}
       //- nuxt-link.sp-menu-item(to="/#product" v-if='!isPageBar') PRODUCT
-      nuxt-link.sp-menu-item(to="/#access") ACCESS
+      nuxt-link.sp-menu-item(to="/#access") {{ $t('navigation.access') }}
+      LanguageSwitcher
 </template>
 
 <script setup lang="ts">

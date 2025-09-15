@@ -53,7 +53,27 @@ export default defineNuxtConfig({
     '@nuxt/image',
     "nuxt-icon",
     "@nuxt/content",
-    "@vueuse/nuxt"
+    "@vueuse/nuxt",
+    [
+      "@nuxtjs/i18n",
+      {
+        locales: [
+          { code: 'ja', name: '日本語', file: 'ja.json' },
+          { code: 'en', name: 'English', file: 'en.json' }
+        ],
+        lazy: true,
+        langDir: 'locales/',
+        defaultLocale: 'ja',
+        detectBrowserLanguage: {
+          useCookie: true,
+          cookieKey: 'i18n_redirected',
+          redirectOn: 'root',
+          alwaysRedirect: false,
+          fallbackLocale: 'ja'
+        },
+        strategy: 'no_prefix'
+      }
+    ]
   ],
   
   vite: {

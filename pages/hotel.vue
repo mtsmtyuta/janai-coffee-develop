@@ -5,7 +5,7 @@
       .hotel-body(v-if="hotel.length > 0")
         .hotel-rte(v-html="hotel[0].contents")
       .hotel-body.hotel-body--empty(v-else)
-        .loader Loading...
+        .loader {{ $t('ui.loading') }}
 
 </template>
 
