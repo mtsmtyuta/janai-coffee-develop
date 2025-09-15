@@ -27,3 +27,6 @@ functions/*
 
 # firebase
 .firebase/*
+
+# vercel
+.vercel/
