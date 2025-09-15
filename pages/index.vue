@@ -52,8 +52,8 @@
                   br
                   | {{ $t('content.concept_bar_subtitle') }}
               transition(name="fade")
-                .discription(v-if='!isPageBar' v-html="$t('content.concept_coffee_description').replace(/\n/g, '<br>')")
-                .discription(v-else v-html="$t('content.concept_bar_description').replace(/\n/g, '<br>')")
+                .discription(v-if='!isPageBar' v-html="$t('content.concept_coffee_description').replace(/\\n/g, '<br>')")
+                .discription(v-else v-html="$t('content.concept_bar_description').replace(/\\n/g, '<br>')")
       section.section.section-concept#drink(v-scroll-motion="handleScrollMotion")
         .section-body
           .section-item(:class='{"reverse": !isPageBar}')
@@ -72,8 +72,10 @@
                 h2.subtitle(v-if='!isPageBar') {{ $t('content.drink_coffee_title') }}
                 h2.subtitle(v-else) {{ $t('content.drink_bar_title') }}
               transition(name="fade")
-                .discription(v-if='!isPageBar' v-html="$t('content.drink_coffee_description').replace(/\n/g, '<br>')")
-                .discription(v-else v-html="$t('content.drink_bar_description').replace(/\n/g, '<br>')")
+                .discription(v-if='!isPageBar' v-html="$t('content.drink_coffee_description').replace(/\\n/g, '<br>')")
+                .discription(v-else)
+                  | {{ $t('content.drink_bar_description') }}
+                  br
                   | 辿り着いた方だけが入れるバーがあります。
                   br
                   | スタッフにこちらの
@@ -90,8 +92,8 @@
           .section-body
             .section-item
               .section-item-content.is-center
-                h2.subtitle(v-html="$t('content.takeout_title').replace(/\n/g, '<br class=\"disable-pc\">')")
-                .discription(v-html="$t('content.takeout_description').replace(/\n/g, '<br>')")
+                h2.subtitle(v-html="$t('content.takeout_title').replace(/\\n/g, '<br class=\"disable-pc\">')")
+                .discription(v-html="$t('content.takeout_description').replace(/\\n/g, '<br>')")
       transition(name="fade")
         section.section.section-concept#menu(v-if='isPageBar' v-scroll-motion="handleScrollMotion")
           .section-body
@@ -102,7 +104,8 @@
                     img.title-image.title-image-portrait(src='/assets/menu-bar1.jpg' srcset='/assets/menu-bar1.jpg 1x, /assets/menu-bar1@2x.jpg 2x')
               .section-item-content
                 h2.subtitle {{ $t('content.menu_bar_title') }}
-                .discription(v-html="$t('content.menu_bar_description').replace(/\n/g, '<br>')")
+                .discription
+                  | {{ $t('content.menu_bar_description') }}
                   br
                   | ちなみにバー側のページは
                   br
@@ -122,7 +125,7 @@
                   li {{ $t('content.access_hours') }}
                   li {{ $t('content.access_address') }}
                   li {{ $t('content.access_location') }}
-                  li: a(href="mailto:info@janaicoffee.tokyo") {{ $t('content.access_email') }}
+                  li: a(href="mailto:info@janaicoffee.tokyo") MAIL：{{ $t('content.access_email') }}
                   li(v-if='isPageBar') {{ $t('content.access_reservation_note') }}
                   li(v-if='isPageBar') {{ $t('content.access_form_label') }}
                     a.access-form-link(href='https://yoyaku.toreta.in/janaicoffee/#/' target="_blank") https://yoyaku.toreta.in/janaicoffee/#/
