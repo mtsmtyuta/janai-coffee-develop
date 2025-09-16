@@ -30,3 +30,7 @@ functions/*
 
 # vercel
 .vercel/
+
+# Environment variables
+.env
+.env.*

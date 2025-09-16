@@ -3,6 +3,10 @@ import svgLoader from "vite-svg-loader"
 const url = 'https://janaicoffee.tokyo'
 
 export default defineNuxtConfig({
+  devServer: {
+    host: 'localhost',
+    port: 3000
+  },
   app: {
     head: {
       title: "JANAI COFFEE",
@@ -72,10 +76,7 @@ export default defineNuxtConfig({
       alwaysRedirect: false,
       fallbackLocale: 'ja'
     },
-    strategy: 'no_prefix',
-    experimental: {
-      nitroContextDetection: false
-    }
+    strategy: 'no_prefix'
   },
   
   vite: {
