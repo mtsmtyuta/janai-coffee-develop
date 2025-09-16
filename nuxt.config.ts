@@ -78,12 +78,8 @@ export default defineNuxtConfig({
     },
     strategy: 'no_prefix',
     experimental: {
-      jsTsFormatResource: true
-    },
-    precompile: {
-      strictMessage: false
-    },
-    vueI18n: './vue-i18n.options.ts'
+      nitroContextDetection: false
+    }
   },
   
   vite: {

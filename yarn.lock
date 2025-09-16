@@ -1035,7 +1035,7 @@
     "@intlify/shared" "9.14.5"
     source-map-js "^1.0.2"
 
-"@intlify/shared@^9.4.0", "@intlify/shared@^9.9.0", "@intlify/shared@9.14.5":
+"@intlify/shared@^9.14.1", "@intlify/shared@^9.4.0", "@intlify/shared@9.14.5":
   version "9.14.5"
   resolved "https://registry.npmjs.org/@intlify/shared/-/shared-9.14.5.tgz"
   integrity sha512-9gB+E53BYuAEMhbCAxVgG38EZrk59sxBtv3jSizNL2hEWlgjBjAw1AwpLHtNaeda12pe6W20OGEa0TwuMSRbyQ==
@@ -1746,13 +1746,13 @@
     chalk "^4.1.0"
     semver "^7.3.2"
 
-"@nuxtjs/i18n@npm:@nuxtjs/i18n-edge":
-  version "8.5.5"
-  resolved "https://registry.npmjs.org/@nuxtjs/i18n/-/i18n-8.5.5.tgz"
-  integrity sha512-HVXRy61VBACIwmap1WxuhT9nNf6liU9L9LQSB6D7LDJ+8w57Cc6qWHRJ7dNI9sI/IQ2FQWk7PkTWriybAd3MlQ==
+"@nuxtjs/i18n@^8.5.6":
+  version "8.5.6"
+  resolved "https://registry.npmjs.org/@nuxtjs/i18n/-/i18n-8.5.6.tgz"
+  integrity sha512-L+g+LygKNoaS/AXExk7tzS9wSNn9QdP1T9VdTjjEGYftpeFgv2U8AQsY0dQAhgPIbXXhIAkNYxTk4YcINj9CfA==
   dependencies:
     "@intlify/h3" "^0.5.0"
-    "@intlify/shared" "^9.9.0"
+    "@intlify/shared" "^9.14.1"
     "@intlify/unplugin-vue-i18n" "^3.0.1"
     "@intlify/utils" "^0.12.0"
     "@miyaneee/rollup-plugin-json5" "^1.2.0"
@@ -1771,7 +1771,7 @@
     sucrase "^3.35.0"
     ufo "^1.3.1"
     unplugin "^1.10.1"
-    vue-i18n "^9.9.0"
+    vue-i18n "^9.14.1"
     vue-router "^4.4.4"
 
 "@nuxtjs/mdc@^0.8.3":
@@ -10912,7 +10912,7 @@ vue-gtag-next@^1.14.0:
   resolved "https://registry.npmjs.org/vue-gtag-next/-/vue-gtag-next-1.14.0.tgz"
   integrity sha512-iJl+cOG2GU5NuxqzSSIpt03WVOvZqyKB9TOy7d55KiuvRklcnb2nlqxW5B/a3/sbIt7fla+XEkRyMCcoz0zAHw==
 
-vue-i18n@*, vue-i18n@^9.9.0:
+vue-i18n@*, vue-i18n@^9.14.1:
   version "9.14.5"
   resolved "https://registry.npmjs.org/vue-i18n/-/vue-i18n-9.14.5.tgz"
   integrity sha512-0jQ9Em3ymWngyiIkj0+c/k7WgaPO+TNzjKSNq9BvBQaKJECqn9cd9fL4tkDhB5G1QBskGl9YxxbDAhgbFtpe2g==
