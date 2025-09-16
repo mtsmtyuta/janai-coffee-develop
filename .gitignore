@@ -27,3 +27,7 @@ functions/*
 
 # firebase
 .firebase/*
+
+# Environment variables
+.env
+.env.*
