@@ -72,7 +72,10 @@ export default defineNuxtConfig({
       alwaysRedirect: false,
       fallbackLocale: 'ja'
     },
-    strategy: 'no_prefix'
+    strategy: 'no_prefix',
+    experimental: {
+      nitroContextDetection: false
+    }
   },
   
   vite: {
