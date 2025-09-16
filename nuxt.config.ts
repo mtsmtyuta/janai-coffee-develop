@@ -76,7 +76,14 @@ export default defineNuxtConfig({
       alwaysRedirect: false,
       fallbackLocale: 'ja'
     },
-    strategy: 'no_prefix'
+    strategy: 'no_prefix',
+    experimental: {
+      jsTsFormatResource: true
+    },
+    precompile: {
+      strictMessage: false
+    },
+    vueI18n: './vue-i18n.options.ts'
   },
   
   vite: {

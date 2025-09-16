@@ -1746,7 +1746,7 @@
     chalk "^4.1.0"
     semver "^7.3.2"
 
-"@nuxtjs/i18n@^8.5.5":
+"@nuxtjs/i18n@npm:@nuxtjs/i18n-edge":
   version "8.5.5"
   resolved "https://registry.npmjs.org/@nuxtjs/i18n/-/i18n-8.5.5.tgz"
   integrity sha512-HVXRy61VBACIwmap1WxuhT9nNf6liU9L9LQSB6D7LDJ+8w57Cc6qWHRJ7dNI9sI/IQ2FQWk7PkTWriybAd3MlQ==
