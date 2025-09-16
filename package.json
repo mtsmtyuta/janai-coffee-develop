@@ -6,7 +6,7 @@
     "buildstg": "nuxt build --dotenv .env.development;",
     "sedprod": "sed -i '' -e 's/N as serverstg/N as server/' .output/server/index.mjs;sed -i '' -e 's/\"codebase\": \"serverstg\"/\"codebase\": \"server\"/' ./firebase.json;",
     "sedstg": "sed -i '' -e 's/N as server/N as serverstg/' .output/server/index.mjs;sed -i '' -e 's/\"codebase\": \"server\"/\"codebase\": \"serverstg\"/' ./firebase.json;",
-    "dev": "rm -rf .output;nuxt dev;",
+    "dev": "rm -rf .output;nuxt dev --host localhost --port 3000;",
     "devstg": "rm -rf .output;nuxt dev --dotenv .env.development",
     "generate": "nuxt generate",
     "generatestg": "nuxt dev --dotenv .env.development",
