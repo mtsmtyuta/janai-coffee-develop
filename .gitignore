@@ -28,6 +28,9 @@ functions/*
 # firebase
 .firebase/*
 
+# vercel
+.vercel/
+
 # Environment variables
 .env
 .env.*

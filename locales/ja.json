@@ -1,0 +1,50 @@
+{
+  "navigation": {
+    "concept": "CONCEPT",
+    "coffee": "COFFEE",
+    "bar": "BAR",
+    "menu": "MENU",
+    "access": "ACCESS"
+  },
+  "content": {
+    "news": "NEWS",
+    "reservation_button": "予約する",
+    "reservation_caption": "空席がある場合、予約なしでの入店も可能です。",
+    "concept_coffee_title": "私たちが提供したいのは",
+    "concept_coffee_subtitle": "コーヒーだけではありません。",
+    "concept_bar_title": "コーヒー屋の",
+    "concept_bar_subtitle": "フリをしたバー",
+    "concept_coffee_description": "時を忘れる。\n計ることをやめる。\n周りと比べない。\nリラックスして\n日常を忘れる時間を。\n何一つ考えず、コーヒーと非日常を\n存分にお楽しみいただけ\nる場所。それが『JANAI COFFEE』です。",
+    "concept_bar_description": "禁酒法が施行されていた1920年代のアメリカ。\nその時代、美容室や法律事務所などを装って\n裏でお酒を密売する文化「スピークイージー」\nが生まれ人気を博しました。\nJANAI COFFEE は\n「コンセプトを面白いと思ってくれた\n人たちだけが集まる場」を作るために\nこのスピークイージーの仕組みを取り入れました。\n(もちろん合法なのでご安心くださいませ。)",
+    "drink_coffee_title": "華やかでフルーティーなコーヒーを。",
+    "drink_bar_title": "バーへの入り方",
+    "drink_coffee_description": "当店のバリスタが選定する\n浅煎り〜中煎りのスペシャルティコーヒー。\n季節やドリンクに合わせて、豆を選定しています。",
+    "drink_bar_description": "見た目は普通のコーヒースタンド。\nその裏側には、この隠しページに\n辿り着いた方だけが入れるバーがあります。\nスタッフにこちらの\nサイトの画面をお見せください。\nお客様を店内へとご案内いたします。\n(この画面をお見せ頂けない方や\n未成年の方はご入店をお断りしています。)",
+    "takeout_title": "テイクアウトして\nすばらしい一日を。",
+    "takeout_description": "カフェインを控えている方向けに\nデカフェのコーヒーもご用意しております。",
+    "menu_bar_title": "FUN & SERENDIPITY",
+    "menu_bar_description": "バーってお酒に詳しくないと\n遊びにいけないイメージ。\nそのイメージを無くしたい。\n実はこのお店のスタッフも\n全員がお酒に凄く詳しい\nという訳ではありません。\nですが、\nこのお店にはスタッフみんなで試飲して\nたのしく選んだお酒がたくさん揃っています。\n詳しくなくても、味が難しくても\nラベルがかわいい、名前がおもしろい、\nそんな「なんとなく」な理由で\nJANAI COFFEEをお楽しみください。\nちなみにバー側のページは\n縦読みしても意味がありません。",
+    "access_name": "JANAI COFFEE",
+    "access_hours": "OPEN 18:00 / CLOSE 24:00",
+    "access_address": "〒150-0022",
+    "access_location": "東京都渋谷区恵比寿南2-3-13 山燃ビルB1F",
+    "access_email": "coffee{'@'}janai-inc.com",
+    "access_reservation_note": "予約はWEBフォームより承っております。",
+    "access_form_label": "フォーム"
+  },
+  "ui": {
+    "loading": "Loading...",
+    "copyright": "Copyright © 2020 JANAI COFFEE All Rights Reserved.",
+    "switch_language": "言語を切り替える"
+  },
+  "meta": {
+    "site_name": "JANAI COFFEE",
+    "description": "時を忘れる。計ることをやめる。周りと比べない。リラックスして日常を忘れる時間を。何一つ考えず、コーヒーと非日常を存分にお楽しみいただける場所。それが『JANAI COFFEE』です。",
+    "keywords": "JANAI COFFEE"
+  },
+  "pages": {
+    "coffee": "Coffee",
+    "games": "Games",
+    "hotel": "Hotel"
+  }
+}

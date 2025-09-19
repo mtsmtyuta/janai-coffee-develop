@@ -5,7 +5,7 @@
       .coffee-body(v-if="coffee.length > 0")
         .coffee-rte(v-html="coffee[0].contents")
       .coffee-body.coffee-body--empty(v-else)
-        .loader Loading...
+        .loader {{ $t('ui.loading') }}
         
 </template>
 <script setup lang="ts">

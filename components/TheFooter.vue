@@ -7,12 +7,12 @@ footer.footer(ref='ref_footer' :class='{ "is-page-bar": isPageBar }')
       .footer-logo(v-if='isPageBar')
         icon-logo-yoko-bar
       nav.menu
-        nuxt-link.menu-item(to="/#concept") CONCEPT
-        nuxt-link.menu-item(to="/#drink" v-if='!isPageBar') COFFEE
-        nuxt-link.menu-item(to="/#drink" v-if='isPageBar') BAR
-        nuxt-link.menu-item(to="/#menu") MENU
+        nuxt-link.menu-item(to="/#concept") {{ $t('navigation.concept') }}
+        nuxt-link.menu-item(to="/#drink" v-if='!isPageBar') {{ $t('navigation.coffee') }}
+        nuxt-link.menu-item(to="/#drink" v-if='isPageBar') {{ $t('navigation.bar') }}
+        nuxt-link.menu-item(to="/#menu") {{ $t('navigation.menu') }}
         //- nuxt-link.menu-item(to="/#product" v-if='!isPageBar') PRODUCT
-        nuxt-link.menu-item(to="/#access") ACCESS
+        nuxt-link.menu-item(to="/#access") {{ $t('navigation.access') }}
       .sns-links
         a.sns-link.instagram(href='https://www.instagram.com/janai_coffee_b/' target='_blank' v-if='isPageBar')
           img(src="/assets/instagram.png")
@@ -20,7 +20,7 @@ footer.footer(ref='ref_footer' :class='{ "is-page-bar": isPageBar }')
           img(src="/assets/instagram.png")
 
   .footer-bottom
-    .copy Copyright &copy; 2020 JANAI COFFEE All Rights Reserved.
+    .copy {{ $t('ui.copyright') }}
 </template>
 
 <script setup lang="ts">

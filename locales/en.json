@@ -1,0 +1,50 @@
+{
+  "navigation": {
+    "concept": "CONCEPT",
+    "coffee": "COFFEE",
+    "bar": "BAR",
+    "menu": "MENU",
+    "access": "ACCESS"
+  },
+  "content": {
+    "news": "NEWS",
+    "reservation_button": "Make Reservation",
+    "reservation_caption": "Walk‑ins are welcome when seats are available.",
+    "concept_coffee_title": "What we serve",
+    "concept_coffee_subtitle": "is more than coffee.",
+    "concept_bar_title": "A bar",
+    "concept_bar_subtitle": "masquerading as a coffee shop",
+    "concept_coffee_description": "Count minutes no more.\nLet comparisons fade.\nOpen yourself to unhurried calm.\nCurl into effortless relaxation.\nKeep everyday routine at bay.\nWander freely through the extraordinary.\nIndulge in a cup that anchors the moment.\nSavor stillness beyond taste.\nExperience it all at JANAI COFFEE.",
+    "concept_bar_description": "In 1920s America, Prohibition was in full swing. Bars hid behind façades—barbershops, law offices, and the like—giving rise to the wildly popular “speakeasy” culture.\n \n JANAI COFFEE adopts that speakeasy spirit to create a hideaway for those who find the concept intriguing.(And yes, everything here is perfectly legal—rest assured.)",
+    "drink_coffee_title": "Floral, fruit‑forward coffees.",
+    "drink_bar_title": "How to enter the bar",
+    "drink_coffee_description": "Our baristas select light‑ to medium‑roast specialty beans, choosing each origin to suit the season and every drink we serve.",
+    "drink_bar_description": "At first glance we're just a humble coffee stand.\nBut hidden behind the counter is a bar open only to those who've discovered this secret page.\n\nShow this screen to any staff member and we'll usher you inside.\n\n(Guests who can't present this page, or who are under the legal drinking age, will be refused entry.)",
+    "takeout_title": "Take it to go\nand make your day wonderful.",
+    "takeout_description": "For guests watching their caffeine,\nwe always have decaf coffee ready.",
+    "menu_bar_title": "FUN & SERENDIPITY",
+    "menu_bar_description": "There's an image that you can't go to bars\nunless you know a lot about alcohol.\nWe want to eliminate that image.\nActually, not all the staff at this store\nare extremely knowledgeable about alcohol.\nHowever,\nthis store has a lot of alcohol that\nall the staff tasted and\nchose together for fun.\nEven if you're not knowledgeable, even if the taste is difficult,\nthe label is cute, the name is interesting,\nplease enjoy JANAI COFFEE\nfor such 'somehow' reasons.\nBy the way, reading the bar side page\nvertically has no meaning.",
+    "access_name": "JANAI COFFEE",
+    "access_hours": "OPEN 18:00 / CLOSE 24:00",
+    "access_address": "〒150-0022",
+    "access_location": "B1F, 2-3-13, Ebisuminami, Shibuya-ku, Tokyo",
+    "access_email": "coffee{'@'}janai-inc.com",
+    "access_reservation_note": "Find a table.",
+    "access_form_label": ""
+  },
+  "ui": {
+    "loading": "Loading...",
+    "copyright": "Copyright © 2020 JANAI COFFEE All Rights Reserved.",
+    "switch_language": "Switch language"
+  },
+  "meta": {
+    "site_name": "JANAI COFFEE",
+    "description": "Count minutes no more. Let comparisons fade. Open yourself to unhurried calm. Curl into effortless relaxation. Keep everyday routine at bay. Wander freely through the extraordinary. Indulge in a cup that anchors the moment. Savor stillness beyond taste. Experience it all at JANAI COFFEE.",
+    "keywords": "JANAI COFFEE"
+  },
+  "pages": {
+    "coffee": "Coffee",
+    "games": "Games",
+    "hotel": "Hotel"
+  }
+}
