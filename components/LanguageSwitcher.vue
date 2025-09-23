@@ -70,12 +70,12 @@ onMounted(() => {
   cursor: pointer;
   font-size: 1.35rem;
   letter-spacing: 0.11em;
+  line-height: 1;
   transition: all ease 1s;
   color: inherit;
   display: flex;
   align-items: center;
   gap: 0.5em;
-  padding: 0 1.8em;
   position: relative;
   font-family: inherit;
   font-weight: inherit;
