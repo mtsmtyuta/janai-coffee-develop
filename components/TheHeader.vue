@@ -14,10 +14,12 @@ header.header(:class='{ "fixed": isRoot && !isScroll, "is-page-bar": isPageBar }
       //- nuxt-link.menu-item(to="/#product" v-if='!isPageBar') PRODUCT
       nuxt-link.menu-item(to="/#access") {{ $t('navigation.access') }}
       LanguageSwitcher
-    .sp-header-menu(:class='{ "open": isMenuDisplayed }', @click='toggleMenu')
-      .bar.bar-1
-      .bar.bar-2
-      .bar.bar-3
+    .sp-header-actions
+      LanguageSwitcher.sp-language-switcher
+      .sp-header-menu(:class='{ "open": isMenuDisplayed }', @click='toggleMenu')
+        .bar.bar-1
+        .bar.bar-2
+        .bar.bar-3
   nav.sp-menu(:class='{ "open": isMenuDisplayed }', @click='closeMenu')
     .sp-menu-inner
       nuxt-link.sp-menu-item(to="/#concept") {{ $t('navigation.concept') }}
@@ -26,56 +28,55 @@ header.header(:class='{ "fixed": isRoot && !isScroll, "is-page-bar": isPageBar }
       nuxt-link.sp-menu-item(to="/#menu" v-if='isPageBar') {{ $t('navigation.menu') }}
       //- nuxt-link.sp-menu-item(to="/#product" v-if='!isPageBar') PRODUCT
       nuxt-link.sp-menu-item(to="/#access") {{ $t('navigation.access') }}
-      LanguageSwitcher
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
-import iconLogoYoko from '../public/assets/logo-yoko.svg?component'
-import iconLogoYokoBar from '../public/assets/logo-yoko-bar.svg?component'
+import { ref, onMounted, onUnmounted } from "vue";
+import iconLogoYoko from "../public/assets/logo-yoko.svg?component";
+import iconLogoYokoBar from "../public/assets/logo-yoko-bar.svg?component";
 
 // import pagemodeStore from '~/store'
-const SCROLL_THRESHOLD = 50
+const SCROLL_THRESHOLD = 50;
 
-const isScroll = ref<Boolean>(true)
-const isMenuDisplayed = ref<Boolean>(false)
+const isScroll = ref<Boolean>(true);
+const isMenuDisplayed = ref<Boolean>(false);
 
-const { isPageBar, setIsPageBar } = useStateIsPageBar()
+const { isPageBar, setIsPageBar } = useStateIsPageBar();
 
 const route = useRoute();
 
 const isRoot = computed(() => {
-  return route.path === '/'
-})
+  return route.path === "/";
+});
 
 const closeMenu = () => {
-  isMenuDisplayed.value = false
-}
+  isMenuDisplayed.value = false;
+};
 
 const toggleMenu = () => {
-  isMenuDisplayed.value = !isMenuDisplayed.value
-}
+  isMenuDisplayed.value = !isMenuDisplayed.value;
+};
 
 onMounted(() => {
-  window.addEventListener('scroll', checkScroll)
-  window.addEventListener('resize', checkScroll)
-  checkScroll()
-})
+  window.addEventListener("scroll", checkScroll);
+  window.addEventListener("resize", checkScroll);
+  checkScroll();
+});
 
 onUnmounted(() => {
-  window.removeEventListener('scroll', checkScroll)
-  window.removeEventListener('resize', checkScroll)
-})
+  window.removeEventListener("scroll", checkScroll);
+  window.removeEventListener("resize", checkScroll);
+});
 
 const checkScroll = () => {
   const scrollTop =
-    document.documentElement.scrollTop || document.body.scrollTop
+    document.documentElement.scrollTop || document.body.scrollTop;
   if (isScroll.value && scrollTop < SCROLL_THRESHOLD) {
-    isScroll.value = false
+    isScroll.value = false;
   } else if (!isScroll.value && scrollTop >= SCROLL_THRESHOLD) {
-    isScroll.value = true
+    isScroll.value = true;
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -108,6 +109,23 @@ const checkScroll = () => {
         background-color: white;
       }
     }
+    .sp-language-switcher {
+      :deep(.language-switcher) {
+        .current-language {
+          color: white;
+          border-color: white;
+        }
+        .dropdown {
+          background-color: rgba(0, 21, 37, 0.9);
+          .language-option {
+            color: white;
+            &:hover {
+              background-color: rgba(255, 255, 255, 0.1);
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -116,7 +134,7 @@ const checkScroll = () => {
   justify-content: space-between;
   @include inner();
   @include sp() {
-    padding: 0 10px;
+    padding: 0 120px 0 10px;
   }
   max-width: initial;
 }
@@ -153,6 +171,7 @@ const checkScroll = () => {
     padding: 0 1.8em;
     font-size: 1.35rem;
     letter-spacing: 0.11em;
+    line-height: 1;
     position: relative;
     transition: all ease 1s;
     // &.exact-active-link {
@@ -174,6 +193,7 @@ const checkScroll = () => {
   }
 }
 
+.sp-header-actions,
 .sp-header-menu,
 .sp-menu {
   @include pc() {
@@ -181,12 +201,35 @@ const checkScroll = () => {
   }
 }
 
-.sp-header-menu {
+.sp-header-actions {
+  display: flex;
+  align-items: center;
   position: absolute;
-  z-index: 3800;
   top: 50%;
   right: 10px;
   transform: translate(0, -50%);
+  z-index: 3800;
+  @include pc() {
+    display: none;
+  }
+}
+
+.sp-language-switcher {
+  :deep(.language-switcher) {
+    .current-language {
+      font-size: 1.2rem;
+      padding: 8px 12px;
+      min-width: auto;
+    }
+    .dropdown {
+      right: 0;
+      left: auto;
+    }
+  }
+}
+
+.sp-header-menu {
+  position: relative;
   width: 50px;
   height: 50px;
   transition: all 0.2s ease-out;
@@ -198,7 +241,7 @@ const checkScroll = () => {
     width: 40px;
     height: 1px;
     border-radius: 2px;
-    background-color: colors('logo');
+    background-color: colors("logo");
     transition: all 0.2s ease-out;
     &.bar-2 {
       margin-top: -15px;
@@ -209,9 +252,9 @@ const checkScroll = () => {
   }
   @include hover();
   &.open {
-    background-color: rgba(colors('dark'), 0);
+    background-color: rgba(colors("dark"), 0);
     .bar {
-      background-color: colors('text');
+      background-color: colors("text");
       &.bar-1 {
         opacity: 0;
       }
