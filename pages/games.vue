@@ -5,7 +5,7 @@
       .games-body(v-if="games.length > 0")
         .games-rte(v-html="games[0].contents")
       .games-body.games-body--empty(v-else)
-        .loader Loading...
+        .loader {{ $t('ui.loading') }}
         
 </template>
 
