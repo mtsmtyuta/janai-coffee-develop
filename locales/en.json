@@ -26,11 +26,9 @@
     "menu_bar_description": "There's an image that you can't go to bars\nunless you know a lot about alcohol.\nWe want to eliminate that image.\nActually, not all the staff at this store\nare extremely knowledgeable about alcohol.\nHowever,\nthis store has a lot of alcohol that\nall the staff tasted and\nchose together for fun.\nEven if you're not knowledgeable, even if the taste is difficult,\nthe label is cute, the name is interesting,\nplease enjoy JANAI COFFEE\nfor such 'somehow' reasons.\nBy the way, reading the bar side page\nvertically has no meaning.",
     "access_name": "JANAI COFFEE",
     "access_hours": "OPEN 18:00 / CLOSE 24:00",
-    "access_address": "〒150-0022",
     "access_location": "B1F, 2-3-13, Ebisuminami, Shibuya-ku, Tokyo",
     "access_email": "coffee{'@'}janai-inc.com",
-    "access_reservation_note": "Find a table.",
-    "access_form_label": ""
+    "access_reservation_note": "Find a table."
   },
   "ui": {
     "loading": "Loading...",

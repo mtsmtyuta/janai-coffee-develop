@@ -26,11 +26,9 @@
     "menu_bar_description": "バーってお酒に詳しくないと\n遊びにいけないイメージ。\nそのイメージを無くしたい。\n実はこのお店のスタッフも\n全員がお酒に凄く詳しい\nという訳ではありません。\nですが、\nこのお店にはスタッフみんなで試飲して\nたのしく選んだお酒がたくさん揃っています。\n詳しくなくても、味が難しくても\nラベルがかわいい、名前がおもしろい、\nそんな「なんとなく」な理由で\nJANAI COFFEEをお楽しみください。\nちなみにバー側のページは\n縦読みしても意味がありません。",
     "access_name": "JANAI COFFEE",
     "access_hours": "OPEN 18:00 / CLOSE 24:00",
-    "access_address": "〒150-0022",
     "access_location": "東京都渋谷区恵比寿南2-3-13 山燃ビルB1F",
     "access_email": "coffee{'@'}janai-inc.com",
-    "access_reservation_note": "予約はWEBフォームより承っております。",
-    "access_form_label": "フォーム"
+    "access_reservation_note": "予約はWEBフォームより承っております。"
   },
   "ui": {
     "loading": "Loading...",

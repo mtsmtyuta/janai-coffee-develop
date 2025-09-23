@@ -109,11 +109,10 @@
                 ul
                   li {{ $t('content.access_name') }}
                   li {{ $t('content.access_hours') }}
-                  li {{ $t('content.access_address') }}
                   li {{ $t('content.access_location') }}
                   li: a(href="mailto:info@janaicoffee.tokyo") MAIL：{{ $t('content.access_email') }}
                   li(v-if='isPageBar') {{ $t('content.access_reservation_note') }}
-                  li(v-if='isPageBar') {{ $t('content.access_form_label') }}
+                  li(v-if='isPageBar') 
                     a.access-form-link(href='https://yoyaku.toreta.in/janaicoffee/#/' target="_blank") https://yoyaku.toreta.in/janaicoffee/#/
             .section-item-content.access-map-wrapper
               .access-map
